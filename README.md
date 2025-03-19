@@ -8,3 +8,4 @@
 1. All
 2. Completed
 3. Pending
+# redux-task-manager
