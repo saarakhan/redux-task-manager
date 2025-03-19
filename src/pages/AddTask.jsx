@@ -8,11 +8,11 @@ const AddTask = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    id:useId(),
+    id: useId(),
     title: '',
     desc: '',
     priority: '',
-    Completed:false
+    Completed: false,
   });
   const changeHandler = event => {
     setFormData(prevData => ({
@@ -38,6 +38,7 @@ const AddTask = () => {
             placeholder='Title'
             name='title'
             value={formData.title}
+            required
             className='w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-500'
           />
         </div>
@@ -48,6 +49,7 @@ const AddTask = () => {
             onChange={changeHandler}
             placeholder='Description'
             name='desc'
+            required
             value={formData.desc}
             className='w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-500'
           />
